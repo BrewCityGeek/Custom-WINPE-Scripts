@@ -1,0 +1,4 @@
+rem == 1. List Disks for Drive Numbers =============
+list disk
+rem == 2. List Volumes for Drive Letters =============
+list volume
