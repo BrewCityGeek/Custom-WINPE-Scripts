@@ -1,3 +1,4 @@
-REM Replace C:\Winpe_amd64 with your directory
+@echo off
+REM Replace C:\images with your directory
 
-dism /unmount-image /mountdir:C:\Winpe_amd64\mount /commit /checkintegrity
+dism /unmount-image /mountdir:C:\images\mount /commit /checkintegrity
