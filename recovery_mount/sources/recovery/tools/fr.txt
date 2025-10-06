@@ -1,0 +1,22 @@
+
+rem ------------------
+rem These commands are used with DiskPart tool.
+rem Erase the drive and create four partitions
+rem for a UEFI/GPT-based PC.
+
+select disk 0
+select partition 1
+assign letter="R"
+
+select partition 2
+assign letter="S"
+
+select partition 4
+format quick fs=ntfs label="Windows"
+assign letter="W"
+
+select partition 5
+format quick fs=ntfs label="Windows RE tools"
+set id="de94bba4-06d1-4d40-a16a-bfd50179d6ac"
+gpt attributes=0x8000000000000001
+assign letter="T"
